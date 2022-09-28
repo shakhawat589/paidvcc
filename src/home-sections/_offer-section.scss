@@ -1,0 +1,51 @@
+@use '../customs' as *;
+@use '../components/mixins' as *;
+
+.offer-product{
+    .dots-wrapper{
+        .dots{
+            display: inline-block;
+            height: 4px;
+            width: 4px;
+            background: #2575FC;
+            border-radius: 50%;
+        }
+        .dots-4{
+            border-radius: 0%;
+            width: 20px;
+        }
+    }
+    .offer-content{
+        background-image: url(../../asset/image/countdown-timer-bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px;
+        padding: 30px;
+        position: relative;
+        z-index: 1;
+        &::after{
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            border-radius: 20px;
+            z-index: -1;
+        }
+        h4{
+            text-align: center;
+            font-size: 30px;
+            -webkit-text-fill-color: transparent;
+            background: linear-gradient(145deg, rgb(248, 31, 1) 0%, rgb(238, 7, 110) 100%);
+            -webkit-background-clip: text;
+            -o-background-clip: text;
+            -moz-background-clip: text;
+            -ms-background-clip: text;
+
+        }
+      
+    }
+}

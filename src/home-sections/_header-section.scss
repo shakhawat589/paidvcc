@@ -1,0 +1,130 @@
+@use '../customs' as *;
+@use '../components/mixins' as *;
+
+.navbar{
+    background: transparent;
+    position:fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    transition: 0.5s;
+    .navbar-brand{
+       img{
+        border-radius: 20px;
+       }
+    }
+    
+}
+
+.my-nav-list{
+    justify-content: space-between;
+    
+    .ul-p{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        gap: 25px;
+        padding-left:0;
+        @include media-breakpoint-down(lg){
+            flex-direction: column;
+        }
+        li{
+            position: relative;
+            &:hover{
+                ul{
+                    visibility: visible;
+                    transform: translateY(-12px);
+                    transition: 0.5s;  
+                }
+            }
+
+            ul{
+                background: $info;
+                border-radius: 5px;
+                width: 160px;
+                position: absolute;
+                left: 0;
+                top: 40px;
+                text-align: left;
+                visibility: hidden;
+                transition: 0.5s;  
+                padding: 0!important;
+               
+                li{
+                    a{
+                        font-size: 12px;
+                        line-height: 1.5;
+                        padding: 10px;
+                        display: block;
+                        &:hover{
+                        background: $secondary;
+                       }
+                        
+                    }
+                }
+            }
+            .active{
+                color: #EC6C0C;
+            }
+            a{
+                text-transform: capitalize;
+                color: $white;
+                display: block;
+                font-size: 17px;
+                font-weight: 400;
+                &:hover{
+                    color: #EC6C0C;
+                }
+                
+            }
+        }
+    }
+}
+.cart-menu{
+    display: flex;
+    gap: 20px;
+    @include media-breakpoint-down(lg){
+       justify-content: center;
+    }
+    .search{
+        color: white; 
+        font-size: 30px;
+    }
+    .cart-icon{
+        color: #EC6C0C;
+        font-size: 30px;
+        position: relative;
+        &:before{
+            content: attr(data-counter);
+            position: absolute;
+            min-width: 1.6em;
+            height: 1.6em;
+            line-height: 1.5em;
+            top: -0.4em;
+            inset-inline-end: -0.7em;
+            border-radius: 100%;
+            color: $white;
+            background-color: #d9534f;
+            text-align: center;
+            font-size: 10px;     
+        }
+    }
+}
+.nav_active{
+    background: $primary;
+}
+.offcanvas-body{
+    background-color: #053B79;
+}
+.offcanvas-header{
+    background-color: rgba(#053B79,0.8);
+}
+.modal-body{
+    input{
+        padding: 10px;
+        width: 100%;
+        
+    }
+}

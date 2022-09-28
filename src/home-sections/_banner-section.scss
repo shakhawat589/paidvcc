@@ -1,0 +1,62 @@
+@use '../customs' as *;
+@use '../components/mixins' as *;
+
+#particles-js{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+}
+.banner{
+    background: $info;
+    padding: 80px 0;
+    .my-container{
+        padding-top: 50px;
+        position: relative;
+        padding: 70px;
+        background: #F99A9A;
+        border: 2px solid #5f5d5d;
+        border-radius: 120px 0 120px 0;
+        overflow: hidden;
+        
+        .b-row{
+            position: relative;  
+            z-index: 1;
+            .bnner-left{
+                margin-top: 50px;
+                @include media-breakpoint-down(lg){
+                    margin-top: 10px;
+                    font-size: 20px;
+                }
+                h6{
+                    font-size: 30px;
+                    font-weight: bold; 
+                    @include media-breakpoint-down(lg){
+                        font-size: 20px;
+                    }
+                }
+                h3{
+                    margin: 30px 0;
+                    font-size: 40px;
+                    font-weight: bold;
+                    @include media-breakpoint-down(lg){
+                        font-size: 16px;
+                    }  
+                }
+                p{
+                    font-size: 20px;
+                    font-weight: bold;
+                    @include media-breakpoint-down(lg){
+                        font-size: 16px;
+                    }  
+                }
+            }
+        }
+        .bnner-right{
+            img{
+                border-radius: 0 60px 0 60px;
+            }
+        }
+    }
+}

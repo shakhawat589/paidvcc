@@ -1,0 +1,51 @@
+@use '../customs' as *;
+@use '../components/mixins' as *;
+
+.counter{
+    background: $white;
+    .conuter-content-1{
+        @include countercontent;
+        background-image: linear-gradient(-35deg,#82E182 0%,#0ACBF5 100%);
+        text-align: center;
+        h2{
+            @include counter-number;
+        }
+        p{
+            @include text;
+        }
+    }
+    .conuter-content-2{
+        @include countercontent;
+        background-image: linear-gradient(-35deg,#B18CFE 0%,#9460FF 100%);
+        text-align: center;
+        h2{
+            @include counter-number;
+        }
+        p{
+            @include text;
+        }
+    }
+    .conuter-content-3{
+        @include countercontent;
+        background-image: linear-gradient(-35deg,#F2709C 0%,#FE8F75 100%);
+        text-align: center;
+        h2{
+            @include counter-number;
+        }
+        p{
+            @include text;
+        }
+    }
+    .conuter-content-4{
+        @include countercontent;
+        background-image: linear-gradient(-35deg,#07B787 0%,#7ED500 100%);
+        text-align: center;
+        h2{
+            @include counter-number;
+        }
+        p{
+            @include text;
+        }
+    }
+
+}

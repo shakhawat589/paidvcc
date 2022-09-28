@@ -1,0 +1,41 @@
+
+//theme-color
+$h-color: #053B79;
+$b-color: #4C94F0;
+$f-color: #122D96;
+// scss-docs-start theme-color-variables
+$primary:       $h-color;
+$secondary:     $f-color;
+$info:          $b-color;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start gray-color-variables
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+//root-scss
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none!important;
+}
+body,a,p,h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto', sans-serif;
+}
+img{
+    max-width: 100%;
+}
+
+@import"../node_modules/bootstrap/scss/bootstrap.scss"

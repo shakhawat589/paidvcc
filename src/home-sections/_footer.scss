@@ -1,0 +1,88 @@
+@use '../customs' as *;
+@use '../components/mixins' as *;
+.footer{
+    background-color: $secondary;
+    .f-1-content{
+        @include media-breakpoint-down(lg){
+            text-align: center;
+        }
+        h6{
+            color: $white;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        a{
+            img{
+                border-radius: 20px;
+            }
+        }
+    }
+    .quick-link-wrapper{
+        @include media-breakpoint-down(lg){
+            text-align: center;
+        }
+        h6{
+            color: white;
+            font-size: 20px;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            li{
+                line-height: 1.8;
+                a{
+                    color: white;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+    .f-e{
+        @include media-breakpoint-down(lg){
+            text-align: center;
+        }
+        .f-e-h{
+            h6{
+                color: $white;
+                font-size: 20px;
+            }
+            p{
+                position: relative;
+                margin: 20px 0;
+                span{
+                    display: inline-block;
+                    padding: 10px 15px;
+                    background: #c2bfbf;
+                    border-radius: 10px 0 0 10px;
+                    border-right: 1px dotted #000;
+                    i{
+                        
+                    }
+
+                   
+                }
+                input{
+                    border: none;
+                    padding: 10px;
+                    border-radius: 0 10px 10px 0;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+        }
+        button{
+            color: $white;
+            background: #D6740F;
+            padding: 10px 20px;
+            border: none;
+            text-transform: capitalize;
+            font-size: 20px;
+            border-radius: 10px;
+            span{
+                display: inline-block;
+                margin-left: 5px;
+            }
+        }
+    }
+}

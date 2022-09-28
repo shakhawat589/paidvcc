@@ -1,0 +1,15 @@
+
+@use'./customs';
+
+//import-components
+@use './components/buttons';
+@use './components/mixins';
+
+//import-section
+@use './home-sections/header-section';
+@use './home-sections/banner-section';
+@use './home-sections/counter';
+@use './home-sections/product';
+@use './home-sections/offer-section';
+@use './home-sections/contact-section';
+@use './home-sections/footer';

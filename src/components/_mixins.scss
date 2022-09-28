@@ -1,0 +1,23 @@
+@mixin counter-number{
+        color: #FFF;
+        font-size: 48px;
+        font-weight: 700;
+}
+@mixin text{
+            color: #FFF;
+            font-size: 20px;
+}
+@mixin pluse{
+    color: #FFF;
+    font-size: 20px;
+    top: 50%;
+    left: 0;
+    position: relative;
+}
+@mixin countercontent{
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0 0 3px 0;
+    border-color: rgba(0,0,0,.2);
+    box-shadow: 0 28px 40px 0 rgb(0 0 0 / 10%);
+}
