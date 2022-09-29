@@ -5,7 +5,8 @@
 @use './components/buttons';
 @use './components/mixins';
 
-//import-section
+
+//home-page-import-section
 @use './home-sections/header-section';
 @use './home-sections/banner-section';
 @use './home-sections/counter';
@@ -13,3 +14,18 @@
 @use './home-sections/offer-section';
 @use './home-sections/contact-section';
 @use './home-sections/footer';
+
+//blog-page-import-section
+@use './blog-section/blog-section';
+
+//blog-s-page-import-section
+@use './blog-s/-blog-s.scss';
+
+//cart-page-import-section
+@use './cart/cart';
+
+//shop-page-import-section
+@use './shop/shop';
+
+//single-page-import-section
+@use './single-p/single';

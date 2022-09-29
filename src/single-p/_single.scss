@@ -1,0 +1,195 @@
+@use '../customs' as *;
+@use '../components/mixins' as *;
+
+.s-product{
+    padding: 100px 0;
+    background-color: #042c58;
+    .my-row{
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        .p-img{
+            width: 100%;
+        }
+        .product-data{
+            nav{
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    text-transform: capitalize;
+                    display: inline-block;
+                    padding: 0 5px;
+                }
+                span {
+                    color: #fff;
+                }
+            }
+            h2{
+                color: #fff;
+                padding: 30px 0;
+            }
+            .p-price{
+                span{
+                    color: #fff;
+                    display: inline-block;	
+                }
+            }
+            select{
+                padding: 10px 20px;
+                margin: 20px 0;
+            }
+            label{
+                color: #fff;
+                font-size: 20px;
+            }
+            .cart-button{
+                input{
+                    padding: 10px;
+                    outline: 0;
+                    display: inline-block;
+                }
+                a{
+                    display: inline-block;
+                    text-decoration: none;
+                    color: #fff;
+                    padding: 10px;
+                    text-transform: capitalize;
+                    border: 1px solid #fff;
+                    border-radius: 10px;
+                    position: relative;
+                    z-index: 1;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: #fff;
+                        border-radius: 10px;
+                        z-index: -1;
+                        transform: scale(1,0.5);
+                        opacity: 0;
+                        
+                    }
+                    &:hover{
+                        color: #000;
+                        &::before{
+                            transform: scale(1,1);
+                            opacity: 1;
+                            transition: 0.5s;
+                        }
+                    }
+                    
+                    
+                }
+            } 
+            p{
+                color: #fff;
+                margin-top: 10px;
+            }
+            h4{
+                color: #fff;
+            }
+            ul{
+                list-style: circle;
+                li{
+                    color: #fff;
+                }
+            }
+            h5{
+                color: #fff;
+            }   
+        }
+    }
+    
+}
+nav{
+
+    .my-tab{
+        justify-content: space-evenly;
+        background-color: #042c58;
+        .active {
+            color: var(--bs-nav-tabs-link-active-color);
+            background-color: #957f7f!important;
+            border-color: white;
+        }
+    }
+}
+.tab-content{
+    background-color: #042c58;
+}
+.p-description{
+	padding: 20px 0;
+
+    .des{
+        h4{
+            color: #fff;
+        }
+        
+        .des-1{
+            padding: 20px 0;
+            p{
+                color: #fff;
+            }
+        }
+        .des-img img{
+            max-width: 100%;
+        }
+    }
+    
+    .des-i {
+       ul{
+            margin-top: 40px;
+            li{
+                color: #fff;
+            }
+       }
+    }
+    
+    .des-2{
+        h3{
+            color: #fff;
+            padding: 10px 0;
+        }
+        p{
+            color: #fff;
+        }
+    }
+ 
+}
+.r-view{
+    h4{
+        color: #fff;
+    }
+    li{
+        list-style: none;
+        color: #fff;
+    }
+    .r-form{
+        input{
+            outline: none;
+            border-radius: 10px;
+            @include media-breakpoint-down(sm){
+                outline: none;
+                border-radius: 10px;
+                width: 100%;
+            }
+        }
+    }
+    .r-submit{
+        display: inline-block;
+        color: rgb(63, 61, 61);
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+}
+.related-p-section{
+    background-color: #042c58;
+    .productsection{
+        background-color: #042c58;
+        .cardbackground{
+            background-color: #042c58;
+        }
+    }
+}

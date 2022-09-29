@@ -44,7 +44,7 @@
     }
 }
 .widget-container{
-    background: rgb(85, 84, 84);
+    background: rgba(85, 84, 84,0.7);
     border-radius: 30px;
     list-style: none;
     padding: 20px 10px;
@@ -54,6 +54,17 @@
     position: fixed;
     right: 0;
     top: 40vh;
+    z-index: 100;
+    @include media-breakpoint-down(md){
+        top: auto;
+        left:0;
+        bottom:0;
+        z-index: 100; 
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 10px;
+    }
 
     li{
         height: 50px;

@@ -1,0 +1,128 @@
+@use '../customs' as *;
+@use '../components/mixins' as *;
+
+
+.breadcum{
+    background-color: #042c58;
+    padding-top:100px;
+}
+.blog-section{
+    background-color: #042c58;
+     
+}
+.productsection-2{
+    .card{
+        background-color: #0b0d1f;
+        .card-img-top{
+            transition: 1s;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        .card-body{
+            .nav-link{
+                border: 1px solid #FFF;
+                display: inline-block;
+                padding: 5px 10px;
+                &:hover{
+                    color: #EC6C0C!important;
+                }
+            }
+        }
+    }
+    .cardbackground{
+        overflow: hidden;
+        
+    }
+}
+
+.pagination{
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px solid #fff;
+
+    .pagi-list{
+        list-style: none;
+        display: flex;
+        gap:0 20px;
+        li{
+            border: 1px solid #fff;
+            a{
+                display: inline-block;
+                color: #fff;
+                padding: 10px;
+                text-decoration: none;
+                &:hover{
+                    background: #2575FC;
+                }
+            }
+        }
+    }
+    
+}
+
+.blog-right{
+	text-align: center;
+    h5{
+        color: #fff;
+        font-size: 30px;
+        
+    }
+
+    .cata-list{
+        list-style: none;
+        background:rgba(143, 122, 122, 0.19);
+        padding: 10px;
+        li{
+            line-height: 1.8;
+            border-bottom: 1px dotted #fff;
+            a{
+                display: inline-block;
+                color: #fff;
+                text-decoration: none;
+                padding: 10px;
+                &:hover{
+                    color:#25D366;
+                }
+            }
+            
+        }
+    }
+    
+    .recent-post{
+          h4{
+            color: #fff;
+          }
+          .recent-list{
+            list-style: none;
+            background:rgba(143, 122, 122, 0.19);
+            padding: 10px;
+            li{
+                line-height: 1.8;
+                border-bottom: 1px dotted #fff;
+                a{
+                    display: inline-block;
+                    color: #fff;
+                    text-decoration: none;
+                    padding: 10px;
+                    &:hover{
+                        color:#25D366;
+                    }
+                }
+                p{
+                    color: #fff;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+
+    
+    
+    
+    
+    
+}
+
+
+

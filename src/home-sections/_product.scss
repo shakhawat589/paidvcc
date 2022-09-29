@@ -20,6 +20,7 @@
         }
     }
 
+    
     .product-card{
         position: relative;
         a{
@@ -74,6 +75,13 @@
         
     }
 }
+.p-grid{
+    @include media-breakpoint-down(sm){
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
 .p-row{
     @include media-breakpoint-down(lg){
         gap: 30px 0;

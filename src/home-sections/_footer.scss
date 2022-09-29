@@ -1,7 +1,7 @@
 @use '../customs' as *;
 @use '../components/mixins' as *;
 .footer{
-    background-color: $secondary;
+    background-color: #053B79;
     .f-1-content{
         @include media-breakpoint-down(lg){
             text-align: center;
@@ -54,12 +54,7 @@
                     padding: 10px 15px;
                     background: #c2bfbf;
                     border-radius: 10px 0 0 10px;
-                    border-right: 1px dotted #000;
-                    i{
-                        
-                    }
-
-                   
+                    border-right: 1px dotted #000;  
                 }
                 input{
                     border: none;
