@@ -1,0 +1,21 @@
+@use '../customs' as *;
+@use '../components/mixins' as *;
+
+.refund{
+    padding: 100px 0 40px 0;
+    background-color: #042c58;
+    h2{
+        color: $white;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .refund-list{
+        li{
+            font-size: 20px;
+            color:$white;
+            margin-bottom: 40px;
+            span{}
+        }
+    }
+}

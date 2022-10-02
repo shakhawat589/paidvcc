@@ -93,8 +93,6 @@
         font-size: 30px;
     }
     .cart-icon{
-        color: #EC6C0C;
-        font-size: 30px;
         position: relative;
         &:before{
             content: attr(data-counter);
@@ -109,6 +107,10 @@
             background-color: #d9534f;
             text-align: center;
             font-size: 10px;     
+        }
+        a{
+            color: #EC6C0C;
+            font-size: 30px;
         }
     }
 }

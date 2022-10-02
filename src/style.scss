@@ -29,3 +29,13 @@
 
 //single-page-import-section
 @use './single-p/single';
+
+//checkout-page-import-section
+@use './checkout/checkout';
+
+//contact-page-import-section
+@use './contact/contact';
+//refund-page-import-section
+@use './refund/refund';
+//faq-page-import-section
+@use './faq/faq';

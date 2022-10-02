@@ -5,6 +5,17 @@
 .breadcum{
     background-color: #042c58;
     padding-top:100px;
+    a{
+        color: white;
+        text-transform: capitalize;
+        
+        &:hover{
+            color:#0e82ff;
+        }
+    }
+    span{
+        color: $white!important;
+    }
 }
 .blog-section{
     background-color: #042c58;
@@ -13,11 +24,17 @@
 .productsection-2{
     .card{
         background-color: #0b0d1f;
+        //overflow: hidden;
         .card-img-top{
-            transition: 1s;
-            &:hover{
-                transform: scale(1.1);
+            overflow: hidden;
+            img{
+                transition: 1s;
+                &:hover{
+                    transform: scale(1.1);
+                }
             }
+            
+           
         }
         .card-body{
             .nav-link{
@@ -30,10 +47,10 @@
             }
         }
     }
-    .cardbackground{
-        overflow: hidden;
+    // .cardbackground{
+    //     overflow: hidden;
         
-    }
+    // }
 }
 
 .pagination{

@@ -1,0 +1,19 @@
+@use '../customs' as *;
+@use '../components/mixins' as *;
+
+.faq{
+    padding: 100px 40px;
+    background-color: #042c58;
+    .accordion-item{
+        background-color: #126bd1;
+        color: $white;
+        .accordion-button{
+            background-color: #042c58;
+            color: $white;
+            &::after{
+                color: $white;
+            }
+        }
+    }
+    
+}

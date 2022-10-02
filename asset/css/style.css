@@ -4311,18 +4311,18 @@ textarea.form-control-lg {
   --bs-accordion-inner-border-radius: calc(0.375rem - 1px);
   --bs-accordion-btn-padding-x: 1.25rem;
   --bs-accordion-btn-padding-y: 1rem;
-  --bs-accordion-btn-color: var(--bs-body-color);
+  --bs-accordion-btn-color: #fff;
   --bs-accordion-btn-bg: var(--bs-accordion-bg);
-  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='var%28--bs-body-color%29'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   --bs-accordion-btn-icon-width: 1.25rem;
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
-  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2305356d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   --bs-accordion-btn-focus-border-color: #829dbc;
   --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(5, 59, 121, 0.25);
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
-  --bs-accordion-active-color: #05356d;
+  --bs-accordion-active-color: #fff;
   --bs-accordion-active-bg: #e6ebf2;
 }
 
@@ -10784,12 +10784,42 @@ textarea.form-control-lg {
   }
 }
 .product-card button {
-  padding: 10px 15px;
-  background: rgba(2, 7, 110, 0.9);
-  border: none;
-  border-radius: 10px;
+  display: inline-block;
+  text-decoration: none;
   color: #fff;
-  margin-top: 10px;
+  padding: 10px;
+  text-transform: capitalize;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-color: #053B79;
+}
+.product-card button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 5px;
+  z-index: -1;
+  transform: scale(1, 0.5);
+  opacity: 0;
+}
+.product-card button:hover {
+  color: #000;
+}
+.product-card button:hover::before {
+  transform: scale(1, 1);
+  opacity: 1;
+  transition: 0.5s;
+}
+.product-card button:hover {
+  border: 1px solid #053B79;
+  color: #053B79;
 }
 
 .p-see-all {
@@ -10812,7 +10842,7 @@ textarea.form-control-lg {
   height: 0%;
   background: #FF067D;
   z-index: -1;
-  border-radius: 50% 50% 20px 20px;
+  border-radius: 50% 50% 10px 10px;
   visibility: hidden;
   transition: 0.8s;
 }
@@ -10951,8 +10981,6 @@ textarea.form-control-lg {
   font-size: 30px;
 }
 .cart-menu .cart-icon {
-  color: #EC6C0C;
-  font-size: 30px;
   position: relative;
 }
 .cart-menu .cart-icon:before {
@@ -10968,6 +10996,10 @@ textarea.form-control-lg {
   background-color: #d9534f;
   text-align: center;
   font-size: 10px;
+}
+.cart-menu .cart-icon a {
+  color: #EC6C0C;
+  font-size: 30px;
 }
 
 .nav_active {
@@ -11286,7 +11318,7 @@ textarea.form-control-lg {
     text-align: center;
   }
 }
-.footer .f-1-content h6 {
+.footer .f-1-content p {
   color: #fff;
   font-size: 20px;
   margin-bottom: 20px;
@@ -11360,6 +11392,16 @@ textarea.form-control-lg {
   background-color: #042c58;
   padding-top: 100px;
 }
+.breadcum a {
+  color: white;
+  text-transform: capitalize;
+}
+.breadcum a:hover {
+  color: #0e82ff;
+}
+.breadcum span {
+  color: #fff !important;
+}
 
 .blog-section {
   background-color: #042c58;
@@ -11369,9 +11411,12 @@ textarea.form-control-lg {
   background-color: #0b0d1f;
 }
 .productsection-2 .card .card-img-top {
+  overflow: hidden;
+}
+.productsection-2 .card .card-img-top img {
   transition: 1s;
 }
-.productsection-2 .card .card-img-top:hover {
+.productsection-2 .card .card-img-top img:hover {
   transform: scale(1.1);
 }
 .productsection-2 .card .card-body .nav-link {
@@ -11381,9 +11426,6 @@ textarea.form-control-lg {
 }
 .productsection-2 .card .card-body .nav-link:hover {
   color: #EC6C0C !important;
-}
-.productsection-2 .cardbackground {
-  overflow: hidden;
 }
 
 .pagination {
@@ -11676,6 +11718,13 @@ textarea.form-control-lg {
   transform: scale(1.1);
 }
 
+.bread-row {
+  padding: 20px 0 30px 0;
+}
+.bread-row h2 {
+  font-size: 50px;
+}
+
 .s-product {
   padding: 100px 0;
   background-color: #042c58;
@@ -11683,7 +11732,7 @@ textarea.form-control-lg {
 .s-product .my-row {
   gap: 40px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .s-product .my-row .p-img {
   width: 100%;
@@ -11714,6 +11763,10 @@ textarea.form-control-lg {
   color: #fff;
   font-size: 20px;
 }
+.s-product .my-row .product-data .cart-button {
+  display: flex;
+  gap: 20px;
+}
 .s-product .my-row .product-data .cart-button input {
   padding: 10px;
   outline: 0;
@@ -11729,6 +11782,7 @@ textarea.form-control-lg {
   border-radius: 10px;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 .s-product .my-row .product-data .cart-button a:before {
   content: "";
@@ -11738,7 +11792,7 @@ textarea.form-control-lg {
   width: 100%;
   height: 100%;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
   z-index: -1;
   transform: scale(1, 0.5);
   opacity: 0;
@@ -11844,6 +11898,231 @@ nav .my-tab .active {
 }
 .related-p-section .productsection .cardbackground {
   background-color: #042c58;
+}
+
+.check-out-section {
+  background-color: #042c58;
+}
+.check-out-section .Checkout {
+  font-size: 50px;
+  font-weight: bold;
+}
+.check-out-section .check-right h5 {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+.check-out-section .check-right ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  border-bottom: 1px dotted #fff;
+  line-height: 3;
+  vertical-align: middle;
+}
+.check-out-section .check-right ul li p {
+  margin-bottom: 0;
+}
+.check-out-section .check-right .bit-coin {
+  padding-left: 2rem;
+}
+.check-out-section .check-right .bit-coin p {
+  color: #fff;
+}
+.check-out-section .check-right .bit-coin .coin-img {
+  display: flex;
+  justify-content: space-evenly;
+}
+.check-out-section .check-right .bit-coin .coin-img li {
+  list-style: none;
+  width: 40px;
+}
+.check-out-section .check-right .bit-coin .coin-img img {
+  width: 100%;
+  display: inline-block;
+}
+.check-out-section .check-right .bit-coin .coin-p {
+  background: rgb(63, 61, 61);
+  padding: 10px;
+  margin-top: 10px;
+  position: relative;
+}
+.check-out-section .check-right .bit-coin .coin-p::before {
+  content: "";
+  position: absolute;
+  left: 101px;
+  top: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #F48012;
+}
+.check-out-section .check-right .personal-data p {
+  color: #fff;
+  margin-bottom: 40px;
+  padding-left: 2rem;
+}
+.check-out-section .check-right .personal-data .pay-btn {
+  padding-left: 2rem;
+}
+.check-out-section .check-right .personal-data .pay-btn a {
+  text-decoration: none;
+  color: #fff;
+  padding: 20px;
+  text-transform: capitalize;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  text-transform: capitalize;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.check-out-section .check-right .personal-data .pay-btn a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 5px;
+  z-index: -1;
+  transform: scale(1, 0.5);
+  opacity: 0;
+}
+.check-out-section .check-right .personal-data .pay-btn a:hover {
+  color: #000;
+}
+.check-out-section .check-right .personal-data .pay-btn a:hover::before {
+  transform: scale(1, 1);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.check-left h3 {
+  color: #fff;
+  font-size: 30px;
+  border-bottom: 1px dotted #fff;
+  padding-bottom: 10px;
+}
+.check-left .name input {
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  background-color: #042c58;
+  border: none;
+  border-bottom: 1px dotted #666;
+  caret-color: white;
+  color: #fff;
+}
+.check-left .email input {
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  background-color: #042c58;
+  border-bottom: 1px solid #666;
+  border: none;
+  border-bottom: 1px dotted #666;
+  caret-color: white;
+  color: #fff;
+}
+.check-left .add-information h4 {
+  color: #fff;
+  padding: 10px;
+}
+.check-left .add-information textarea {
+  width: 100%;
+  border-radius: none;
+  background-color: #042c58;
+  border-bottom: 1px solid #666;
+  border: none;
+  border-bottom: 1px dotted #666;
+  caret-color: white;
+  color: #fff;
+}
+.check-left .add-information textarea:focus {
+  outline: none;
+}
+.check-left label {
+  color: white;
+  text-transform: capitalize;
+}
+
+.contact {
+  padding: 100px 0 50px 0;
+}
+.contact .con-h h2 {
+  text-transform: capitalize;
+  font-size: 60px;
+  color: #fff;
+  text-align: center;
+}
+.contact .send {
+  margin-top: 30px;
+}
+.contact .send button {
+  width: 100%;
+  text-transform: capitalize;
+  padding: 10px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  border: 1px solid #fff;
+  z-index: 1;
+  background: #042c58;
+}
+.contact .send button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #126bd1;
+  z-index: -1;
+  transition: 0.5s;
+}
+.contact .send button:hover::before {
+  width: 100%;
+}
+
+.refund {
+  padding: 100px 0 40px 0;
+  background-color: #042c58;
+}
+.refund h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+.refund .refund-list li {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.faq {
+  padding: 100px 40px;
+  background-color: #042c58;
+}
+.faq .accordion-item {
+  background-color: #126bd1;
+  color: #fff;
+}
+.faq .accordion-item .accordion-button {
+  background-color: #042c58;
+  color: #fff;
+}
+.faq .accordion-item .accordion-button::after {
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

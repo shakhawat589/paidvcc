@@ -1,0 +1,149 @@
+@use '../customs' as *;
+@use '../components/mixins' as *;
+
+.check-out-section{
+    background-color: #042c58;
+    .Checkout{
+        font-size: 50px;
+	    font-weight: bold;
+    }
+    
+    .check-right{
+        h5{
+            color: #fff;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        ul{
+            li{
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                color: #fff;
+                border-bottom: 1px dotted #fff;
+                line-height: 3.0;
+                vertical-align: middle;
+                p{
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .bit-coin{
+            padding-left: 2rem;
+            p{
+                color: #fff;
+            }
+            .coin-img{
+                display: flex;
+                justify-content: space-evenly;
+                li{
+                    list-style: none;
+                    width: 40px;
+                }
+                img{
+                    width:100%;
+                    display: inline-block;
+                }
+            }
+            .coin-p{
+                background:rgb(63, 61, 61);
+                padding: 10px;
+                margin-top: 10px;
+                position: relative;
+            }
+            .coin-p::before{
+                content: "";
+                position: absolute;
+                left:101px;
+                top: -10px;
+                width: 0; 
+                height: 0; 
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid #F48012;
+            }
+        }
+        .personal-data{
+            p{
+                color: #fff;
+                margin-bottom: 40px;
+                padding-left: 2rem;
+            }
+            .pay-btn{
+                padding-left: 2rem;
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                    //background:rgba(94, 76, 94, 0.5);
+                    padding: 20px;
+                   
+                    text-transform: capitalize; 
+                    @include btnstyle;
+
+                }
+            }
+            
+        }  
+    }
+}
+
+.check-left{
+    h3{
+        color: #fff;
+        font-size: 30px;
+        border-bottom: 1px dotted #fff;
+        padding-bottom: 10px;
+    }
+    .name{
+        input{
+            width: 100%;
+            padding: 10px;
+            outline: 0;
+            background-color: #042c58;
+            border: none;
+            border-bottom: 1px dotted #666;
+            caret-color: white;
+            color: #fff;
+        
+        }
+    }
+    .email{
+        input{
+            width: 100%;
+            padding: 10px;
+            outline: 0;
+            background-color: #042c58;
+            border-bottom: 1px solid #666;
+            border: none;
+            border-bottom: 1px dotted #666;
+            caret-color: white;
+            color: #fff;
+        }
+    }
+    .add-information{
+        h4{
+            color: #fff;
+            //border-bottom: 1px dotted #fff;
+            padding: 10px;
+        }
+        textarea{
+            width: 100%;
+            border-radius: none;
+            background-color: #042c58;
+            border-bottom: 1px solid #666;
+            border: none;
+            border-bottom: 1px dotted #666;
+            caret-color: white;
+            color: #fff;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+    label{
+        color: white;
+        text-transform: capitalize;
+    }
+    
+}
